@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num1 = parseInt(prompt("첫 번째 숫자 입력.")); // num1값 입력받기
+      var num2 = parseInt(prompt("두 번째 숫자 입력.")); // num2값 입력받기
+      let sum = 0; // 결과 값
+
+      (function sumMulti() {
+        // 두 수의 값이 같으면 곱하고 다르면 더하는 함수
+        if (num1 === num2) {
+          sum = num1 * num2;
+          return console.log(sum);
+        } else if (num1 !== num2) {
+          sum = num1 + num2;
+          return console.log(sum);
+        }
+      })();
+    </script>
+  </body>
+</html>
