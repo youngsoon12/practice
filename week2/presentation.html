@@ -1,3 +1,4 @@
+<!-- 직접 테스트하거나 실행하고 싶은 분들은 복붙하시면 됩니다 ! -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -39,9 +40,9 @@
         a = "a 2호 입니다.";
         b = "b 2호 입니다.";
         c = "c 2호 입니다.";
-        // d = "d 2호 입니다.";  // const라 값을 변경할 수 없는 것 같다.
+        // d = "d 2호 입니다."; // const라 값을 변경할 수 없는 것 같다.
       }
-      a1();
+      a2();
       document.write("a의 문자열 : ", a, "<br>");
       document.write("b의 문자열 : ", b, "<br>");
       document.write("c의 문자열 : ", c, "<br>");
@@ -59,6 +60,7 @@
       //호이스팅이란 : 함수 안에 있는 선언들을 모두 끌어 올려서 해당 함수 유효 범위의 최상단에 선언하는 것
       //호이스팅의 대상 : var 변수 선언과 함수의 선언
 
+      var foo2;
       foo();
       // foo2(); //error
 
@@ -66,7 +68,7 @@
         // 함수선언문
         document.write("hello");
       }
-      var foo2 = function () {
+      foo2 = function () {
         // 함수표현식
         document.write("hello2");
       };

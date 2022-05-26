@@ -1,3 +1,5 @@
+<!-- 직접 실행하거나 테스트 해보고 싶은 분들은 복붙 하시면 됩니다!-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,32 +11,21 @@
   <body>
     <pre>
         <script>
-            document.write(a);
-            // document.write(c);
-            // document.write(b);
-            var a = 1;
-            let b = 5;
-            c=2;
+            // document.write(a);
+            // // document.write(c);
+            // // document.write(b);
+            // var a = 1;
+            // let b = 5;
+            // c=2;
 
-            // function loop(){
-            //   for(var i=0; i<5; i++){
-            //     console.log(i);
-            //   }
-            //   console.log('final',i);
-            // }
-
-            // loop();
-
-            var nums2 = Array(4);
-            for(i=0; i<nums2.length; i++){
-              nums2[i]=i;
+            function loop(){  // let으로 할 시 let은 블록스코프이므로, for문을 벗어나면 효력을 잃기 때문에 오류발생
+              // let을 var로 바꿀 시 var은 함수스코프이므로, 잘 작동
+              for(var i=0; i<5; i++){
+                console.log(i);
+              }
+              console.log('final',i);
             }
-           
-            for(i=0; i=nums2.length; i++){
-              document.write(nums2[i],"<br>");
-            }
-            
-            
+            loop();            
         </script>
     </pre>
   </body>
