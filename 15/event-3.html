@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="css/function.css">
+  </head>
+  <body>
+    <button id="change">글자색 바꾸기</button>
+    <p>뭐 임마 </p>
+    <script>
+    // var changeBttn = document.querySelector('#change');
+    // changeBttn.onclick = changeColor;
+    
+    // function changeColor(){
+    //   document.querySelector('p').style.color="#f00";
+    // }
+    
+    // document.querySelector("#change").onclick = a;
+
+    // function a(){
+    //   document.querySelector('p').style.color="grey";
+    // }
+      
+    document.querySelector('#change').onclick = function() {
+      document.querySelector("p").style.color="yellow";
+    }
+
+    </script>
+  </body>
+  </html>  
