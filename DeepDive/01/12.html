@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function multiple(x, y) {
+      //     return x * y;
+      //     console.log("실행되지 않는다.");
+      //   }
+
+      //   var result = multiple(3, 5);
+      //   console.log(result);
+
+      //   function changeVal(primitive, obj) {
+      //     primitive += 100;
+      //     obj.name = "Kim";
+      //   }
+
+      //   // 외부상태
+      //   var num = 100;
+      //   var person = { name: "Lee" };
+      //   console.log(num);
+      //   console.log(person);
+
+      //   // 원시 값은 값 자체가 복사되어 전달되고 객체는 참조 값이 복사되어 전달된다.
+      //   changeVal(num, person);
+
+      //   console.log(num);
+      //   console.log(person);
+
+      //   function countdown(n) {
+      //     for (var i = n; i >= 0; i--) console.log(i);
+      //   }
+      //   countdown(10);
+
+      //   function countdown(n) {
+      //     if (n < 0) return;
+      //     console.log(n);
+      //     countdown(n - 1);
+      //   }
+      //   countdown(10);
+
+      //   function factorial(n) {
+      //     if (n <= 1) return 1;
+      //     return n * factorial(n - 1);
+      //   }
+
+      //   console.log(factorial(3));
+
+      //   var factorial = function foo(n) {
+      //     if (n <= 1) return 1;
+      //     return n * foo(n - 1);
+      //   };
+
+      //   console.log(factorial(5));
+
+      //   function factorial(n) {
+      //     if (n <= 1) return 1;
+
+      //     var res = n;
+      //     while (--n) res *= n;
+      //     return res;
+      //   }
+
+      //   console.log(factorial(5));
+
+      //   function outer() {
+      //     var x = 1;
+
+      //     // 중첩 함수
+      //     function inner() {
+      //       var y = 2;
+      //       console.log(x + y);
+      //     }
+      //     inner();
+      //   }
+      //   outer();
+
+      //   function repeat(n) {
+      //     for (var i = 0; i < n; i++) console.log(i);
+      //   }
+      //   repeat(5);
+
+      //   function repeat1(n) {
+      //     for (var i = 0; i < n; i++) console.log(i);
+      //   }
+      //   repeat1(5);
+
+      //   function repeat(n, f) {
+      //     for (var i = 0; i < n; i++) {
+      //       f(i);
+      //     }
+      //   }
+
+      //   var logAll = function (i) {
+      //     console.log(i);
+      //   };
+
+      //   repeat(5, logAll);
+
+      //   var logOdds = function (i) {
+      //     if (i % 2) console.log(i);
+      //   };
+
+      //   repeat(5, logOdds);
+
+      //   repeat(5, function (i) {
+      //     if (i % 2) console.log(i);
+      //   });
+
+      //   var logOdds = function (i) {
+      //     if (i % 2) console.log(i);
+      //   };
+
+      //   var res = [1, 2, 3].map(function (item) {
+      //     return item * 2;
+      //   });
+      //   console.log(res[3]);
+
+      //   res = [1, 2, 3].filter(function (item) {
+      //     return item % 2;
+      //   });
+      //   console.log(res);
+
+      //   res = [1, 2, 3].reduce(function (acc, cur) {
+      //     return acc + cur;
+      //   }, 0);
+      //   console.log(res);
+
+      var count = 0;
+      function increase(n) {
+        return ++n;
+      }
+
+      // 순수 함수가 반환한 결과값을 변수에 재할당해서 상태를 변경
+      count = increase(count);
+      console.log(count);
+
+      count = increase(count);
+      console.log(count);
+
+      //   var count = 0;
+
+      //   //비순수함수
+      //   function increase() {
+      //     return ++count;
+      //   }
+      //   //비순수 함수는 외부 상태(count)를 변경하므로 상태 변화를 추적하기 어려워진다.
+      //   increase();
+      //   console.log(count);
+      //   increase();
+      //   console.log(count);
+    </script>
+  </body>
+</html>
