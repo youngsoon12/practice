@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function foo() {
+      //   var x = "local";
+      //   console.log(x);
+      //   return x;
+      // }
+
+      // foo();
+      // console.log(x);
+
+      // var x = "global";
+      // function foo() {
+      //   console.log(x);
+      //   var x = "local";
+      // }
+
+      // foo();
+      // console.log(x);
+
+      // var MYAPP = {};
+      // MYAPP.name = "Lee";
+
+      var Counter = (function () {
+        var num = 0;
+
+        //외부로 공개할 데이터나 메서드를 프로퍼티로 추가한 객체를 반환한다.
+        return {
+          increase() {
+            return ++num;
+          },
+          decrease() {
+            return --num;
+          },
+        };
+      })();
+
+      console.log(Counter.num);
+    </script>
+  </body>
+</html>

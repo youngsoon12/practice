@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function add(x, y) {
+      //     console.log(x, y);
+      //     return x + y;
+      //   }
+
+      //   console.log(add(2, 5));
+
+      //전역함수
+      //   function foo() {
+      //     console.log("global function foo");
+      //   }
+
+      //   function bar() {
+      //     //중첩함수
+      //     function foo() {
+      //       console.log("local function foo");
+      //     }
+      //     foo();
+      //   }
+      //   bar();
+      var x = 1;
+
+      function bar() {
+        console.log(x);
+      }
+      function foo() {
+        var x = 10;
+        bar();
+      }
+
+      foo();
+      bar();
+    </script>
+  </body>
+</html>
