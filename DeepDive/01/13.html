@@ -28,14 +28,17 @@
       //     foo();
       //   }
       //   bar();
+
+      //렉시컬 스코프
       var x = 1;
 
-      function bar() {
-        console.log(x);
-      }
       function foo() {
         var x = 10;
         bar();
+      }
+
+      function bar() {
+        console.log(x);
       }
 
       foo();
