@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   // 빈 객체 생성
+      //   const person = new Object();
+
+      //   // 프로퍼티 추가
+      //   person.name = "Lee";
+      //   person.sayHello = function () {
+      //     console.log("Hi ! My name is " + this.name);
+      //   };
+
+      //   console.log(person);
+      //   person.sayHello();
+
+      //   // String 생성자 함수에 의한 String 객체 생성
+      //   const strObj = new String("Lee");
+      //   console.log(typeof strObj); // object
+      //   console.log(strObj);
+
+      //   // Number 생성자 함수에 의한 Number 객체 생성
+      //   const numObj = new Number(123);
+      //   console.log(typeof numObj);
+      //   console.log(numObj);
+
+      //   //Boolean 생성자 함수에 의한 Boolean 객체 생성
+      //   const boolObj = new Boolean(true);
+      //   console.log(typeof boolObj);
+      //   console.log(boolObj);
+
+      //   // Function 생성자 함수에 의한 function 객체(함수) 생성
+      //   const func = new Function("x", "return x*x");
+      //   console.log(typeof func);
+      //   console.log(func);
+
+      //   const circle1 = {
+      //     radius: 5,
+      //     getDiameter() {
+      //       return 2 * this.radius;
+      //     },
+      //   };
+
+      //   console.log(circle1.getDiameter());
+
+      //   const circle2 = {
+      //     radius: 10,
+      //     getDiameter() {
+      //       return 2 * this.radius;
+      //     },
+      //   };
+
+      //   console.log(circle2.getDiameter());
+
+      // 생성자 함수
+      function Circle(radius) {
+        // 생성자 함수 내부의 this는 생성자 함수가 생성할 인스턴스를 가진다.
+        this.radius = radius;
+        this.getDiameter = function () {
+          return 2 * this.radius;
+        };
+      }
+
+      const circle1 = new Circle(5);
+      const circle2 = new Circle(10);
+
+      console.log(circle1.getDiameter());
+      console.log(circle2.getDiameter());
+
+      // 함수는 다양한 방식으로 호출될 수 있다.
+      function foo() {
+        console.log(this);
+      }
+
+      // 일반적인 함수로서 호출
+      foo();
+
+      console.log();
+    </script>
+  </body>
+</html>
